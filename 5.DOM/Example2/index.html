@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .box {
+        width: 300px;
+        height: 300px;
+        border: 5px solid red;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <section class="main">
+      <div class="box"></div>
+      <button onclick="handlesubmit()" class="change">Change Color</button>
+    </section> -->
+
+    <section>
+        <h1>Name:Prakash</h1>
+        <h1>Address:Butwal</h1>
+        <h1>Age:24</h1>
+    </section>
+
+    <script>
+
+        let name= document.getElementsByTagName("h1")[0];
+        name.innerHTML = "Name:<b>Basanta </b>"
+
+
+
+
+      let flag = 0;
+
+      function handlesubmit() {
+        let circle = document.getElementsByClassName("box")[0];
+
+        if (flag == 0) {
+          circle.style.background = "blue";
+          circle.style.borderColor = "black";
+          flag = 1;
+        } else {
+          circle.style.background = "transparent";
+          circle.style.borderColor = "red";
+          flag = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

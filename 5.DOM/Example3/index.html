@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="classItem" id="idItem">This is h1 tag</h1>
+    <h2 class="classItem">This is h2 tag</h2>
+    <h3>This is h3 tag</h3>
+    <h4 class="classItem">This is h4 tag</h4>
+    <p1 class="classItem">This is p1 tag</p1>
+    <h4>This is h4 first tag</h4>
+    <h4>This is h4 second  tag</h4>
+
+    <script>
+        //get all the element by id
+        let first = document.getElementById("idItem")
+        first.innerHTML = "surprize <b>i am h1 tag </b>"
+        first.style.color ="red"
+        first.style.backgroundColor ="black"
+        // console.log(first.innerHTML);
+
+
+        //get all the element by class
+        let second = document.getElementsByClassName("classItem")[1];
+        second.style.color="blue";
+        second.style.backgroundColor = "grey"
+        // console.log(second.innerHTML)
+
+        //get all the element by tagname
+        let third = document.getElementsByTagName("h4")[1];
+        third.style.color = "orange";
+        third.style.backgroundColor = "green"
+        // console.log(third);
+
+        //get all the element by queryselector by class
+        let forth = document.querySelector(".classItem");
+
+        //get all the element by queryselector by id
+        let fifth = document.querySelector("#idItem");
+        // console.log(fifth.innerHTML);
+
+        //get all the element by queryselector by tag
+        let sixth = document.querySelector("h4");
+        // console.log(sixth.innerHTML);
+
+        //queryselectorall 
+        //get all the element by queryselector all by tag
+        let seventh = document.querySelectorAll("h4")[0]
+        console.log(seventh.innerHTML);
+    
+    </script>
+    
+</body>
+</html>

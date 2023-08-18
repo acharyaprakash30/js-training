@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="main">
+        <p class="heading">This is heading</p>
+    </div>
+
+    <script>
+
+        //crete new element
+        let newElement = document.createElement("p");
+        newElement.innerHTML = "hello this is text append on it"
+
+        let main = document.getElementsByClassName("main")[0];
+        main.appendChild(newElement);
+
+        // //create new attributes
+        // let idAttr = document.createAttribute("id");
+        // idAttr.value="newPTagId";
+
+
+        //     //create new class attributes
+        //     let classAttr = document.createAttribute("class");
+        // classAttr.value="newPTagClass";
+
+        // newElement.setAttributeNode(idAttr);
+        // newElement.setAttributeNode(classAttr);
+
+
+
+
+
+
+
+
+
+
+
+
+        let mainclass = document.getElementsByClassName("main")[0];
+
+        //create id attributes for main div
+        const newAttr = document.createAttribute("id");
+        newAttr.value = "mainDiv";
+        mainclass.setAttributeNode(newAttr);
+
+
+        let heading = document.getElementsByClassName("heading")[0];
+
+        //create id attributes
+        const attr = document.createAttribute("id");
+        attr.value = "mainheading";
+    
+        heading.setAttributeNode(attr);
+
+
+
+    </script>
+
+</body>
+</html>

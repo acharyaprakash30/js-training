@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Input Fields</title>
+</head>
+<body>
+  <button id="addInputButton">Add Input Field</button>
+  <div id="inputContainer">
+    <!-- Input fields will be added here -->
+  </div>
+
+  <script>
+    const addInputButton = document.getElementById("addInputButton");
+    const inputContainer = document.getElementById("inputContainer");
+    let inputCount = 0;
+
+    addInputButton.addEventListener("click", function() {
+      inputCount++;
+      const inputField = document.createElement("input");
+      inputField.type = "text";
+      inputField.placeholder = `Enter value ${inputCount}`;
+      inputField.id = `input${inputCount}`; // Assigning an id
+      inputField.className = "input-field"; // Adding a class
+
+      const removeButton = document.createElement("button");
+      removeButton.textContent = "Remove";
+      removeButton.addEventListener("click", function() {
+        inputContainer.removeChild(inputField);
+        inputContainer.removeChild(removeButton);
+      });
+
+      inputContainer.appendChild(inputField);
+      inputContainer.appendChild(removeButton);
+    });
+  </script>
+</body>
+</html>

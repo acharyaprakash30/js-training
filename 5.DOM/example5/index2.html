@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="magicButton">Magic Button</button>
+    <p id="magicText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad eum nobis debitis? Soluta cupiditate temporibus ad quaerat. Officia dolorem excepturi error aspernatur atque, voluptas vitae minima ad repellat quaerat quibusdam?
+    Voluptatum autem velit fugit et itaque ipsa amet nisi similique eligendi aperiam, obcaecati sunt aliquid quis ipsum doloribus illum exercitationem eius. Minima corporis velit ad explicabo odit, fugiat provident sint.
+    Blanditiis quaerat voluptate deleniti fugiat maiores aut, aperiam vel, maxime aliquid recusandae quia animi numquam dolor eaque placeat aliquam sequi nemo similique ex iste tempora in? Laboriosam dignissimos aspernatur iure!</p>
+
+    <script>
+
+        let magicButton = document.getElementById("magicButton");
+        let magicText = document.getElementById("magicText");
+        magicText.style.display = 'none'
+
+        magicButton.addEventListener("click",handleclick);
+        magicText.addEventListener("click",handleTextclick);
+
+        function handleclick(){
+            magicText.style.display = 'block';
+            magicButton.style.display = 'none';
+        }
+        function handleTextclick(){
+            magicText.style.display = 'none';
+            magicButton.style.display = 'block';
+        }
+        
+
+
+    </script>
+
+</body>
+</html>

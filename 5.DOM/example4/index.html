@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: aqua;
+            gap: 1rem;
+        }
+        button{
+            font-size: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 10px solid #f2f2f2;
+        }
+        p{
+            font-size: 30px;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+        <section class="main">
+            <button id="increment">+</button>
+                <p id="count">1</p>
+            <button id="decrement" >-</button>
+        </section>
+
+        <script>
+            let increment = document.getElementById("increment");
+            let decrement = document.getElementById("decrement");
+            let count = document.getElementById("count");
+
+            increment.addEventListener("click",incrementNumber);
+            decrement.addEventListener("click",decrementNumber);
+        
+            
+            function incrementNumber(){
+                count.innerHTML = Number(count.innerHTML) + 1;
+            }
+            function decrementNumber(){
+                if(count.innerHTML >0){
+                    count.innerHTML = Number(count.innerHTML) - 1;
+                }
+            }
+        </script>
+
+
+    
+</body>
+</html>
