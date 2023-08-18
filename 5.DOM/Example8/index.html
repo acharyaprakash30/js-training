@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .main{
+            width: 30vw;
+            min-height: 40vw;
+            box-shadow: 10px 7px 20px 5px #f2f2f2;
+        }
+        #add{
+            font-size: 20px;
+            padding: 10px;
+            background-color: crimson;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        input{
+            font-size: 20px;
+            padding: 5px;
+            margin:2px
+        }
+
+        .delete{
+            font-size: 20px;
+            padding: 10px;
+            background-color: crimson;
+            color: white;
+        }
+
+        
+
+
+        
+    </style>
+</head>
+<body>
+
+<section class="main">
+    <button id="add">Add Input Field</button>
+    <div id="content-wrapper">
+    </div>
+</section>
+
+
+    <script>
+
+        let addButton = document.getElementById("add");
+        let contentWrapper = document.getElementById("content-wrapper");
+
+        addButton.addEventListener("click",handleClick);
+
+        function handleClick(){
+            
+            let newInputField = document.createElement("input");
+            newInputField.placeholder ="enter any text";
+            contentWrapper.appendChild(newInputField)
+
+            let newButton = document.createElement("button");
+            newButton.innerText ="Delete"
+            newButton.className = "delete"
+            contentWrapper.appendChild(newButton)
+
+
+            newButton.addEventListener("click",handleDelete);
+
+
+            function handleDelete(){
+                contentWrapper.removeChild(newInputField)
+                contentWrapper.removeChild(newButton)
+            }
+
+        }
+
+
+        
+    </script>
+</body>
+</html>
