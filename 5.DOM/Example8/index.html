@@ -60,15 +60,18 @@
 
     <script>
 
+        let count = 0;
+
         let addButton = document.getElementById("add");
         let contentWrapper = document.getElementById("content-wrapper");
 
         addButton.addEventListener("click",handleClick);
 
         function handleClick(){
-            
+            count = count+1;
+
             let newInputField = document.createElement("input");
-            newInputField.placeholder ="enter any text";
+            newInputField.placeholder =`enter any text of count ${count}`;
             contentWrapper.appendChild(newInputField)
 
             let newButton = document.createElement("button");
