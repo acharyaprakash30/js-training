@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-direction: column;
+        }
+        .images{
+            display: flex;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+        }
+        button{
+            font-size: 30px;
+            padding: 10px;
+            background: red;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <section>
+        <div class="images">
+            <img id="notGlowing" src="glowing.avif" alt="glowing-image" />
+            <img id="glowing" src="glows.png" alt="glowing-image" />
+        </div>
+        <button id="submit">Turn On</button>
+    </section>
+
+    <script>
+        let notGlowingBulb= document.getElementById("notGlowing");
+        let glowingBulb = document.getElementById("glowing");
+        let submitButton = document.getElementById("submit");
+
+        //hide glowing bulb
+        glowingBulb.style.display = "none"; 
+
+        let flag = 0;
+        submitButton.addEventListener("click",function(){
+            if(flag == 0){
+                glowingBulb.style.display = "block";
+            notGlowingBulb.style.display = "none";
+            submitButton.innerText = "Turn Off"
+            flag = 1;
+            }
+            else{
+                glowingBulb.style.display = "none";
+            notGlowingBulb.style.display = "block";
+            submitButton.innerText = "Turn On"
+            flag = 0;
+            }
+        
+        })
+
+    </script>
+
+
+
+
+
+
+    
+</body>
+</html>

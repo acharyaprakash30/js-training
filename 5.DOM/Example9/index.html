@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:500px;
+            height: 500px;
+            background-color: aqua;
+            }
+            span{
+                padding: 100px;
+                background-color: red
+            }
+            button{
+                width: 10vh;
+                height: 10vh;
+                margin: auto;
+            }
+            
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            <button>Click Me</button>
+        </span>
+    </div>
+
+
+    <script>
+
+let divItem = document.getElementsByTagName("div")[0];
+let spanItem = document.getElementsByTagName("span")[0];
+let buttonItem = document.getElementsByTagName("button")[0];
+
+
+//event bubbling method
+divItem.addEventListener("click",function(){
+    console.log("Click on div item")
+});
+
+spanItem.addEventListener("click",function(){
+    console.log("Click on span item")
+});
+
+buttonItem.addEventListener("click",function(event){
+    event.stopPropagation();
+    console.log("Click on buttom item")
+});
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
