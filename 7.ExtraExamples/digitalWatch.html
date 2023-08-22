@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 5rem;
+    background-color: aqua;
+    font-size: 60px;
+}
+
+</style>
+<body>
+    <h1>Digital Watch</h1>
+    <h2 id="date"></h2>
+
+
+    <script>
+
+        function getAllTime(){
+                    let now = new Date();
+            
+                    let hours = String(now.getHours()).padStart(2,'0');
+                    let minute = String(now.getMinutes()).padStart(2,'0');
+                    let second = String(now.getSeconds()).padStart(2,'0');
+            
+                    let totalTime = `${hours} : ${minute} : ${second} `;
+                    document.getElementById('date').innerHTML = totalTime;
+        }
+
+        setInterval(getAllTime,1000);
+
+
+    </script>
+
+
+
+    
+</body> 
+</html>
